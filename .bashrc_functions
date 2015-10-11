@@ -1,0 +1,97 @@
+function spellcheck() {
+  LANG="de_DE"
+  if [ "$#" -eq "1" ]; then
+    aspell -t -x -d $LANG -c "$1"
+  else
+    if [ "$1" == "en" ]; then
+      LANG="en_GB"
+    fi
+      aspell -t -x -d $LANG -c "$2"
+  fi
+}
+
+function pingd() {
+  if [ -z "$1" ]; then
+    ping "www.google.de"
+  else
+    ping $1
+  fi
+}
+alias ping='pingd'
+
+
+function cdd() {
+  cd "$1" && pwd && ls
+}
+alias cd='cdd'
+
+function cpcd() {
+  cp "$1" "$2" && cd "$2"
+}
+
+function mvcd() {
+  mv "$1" "$2" && cd "$2"
+}
+
+function mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+
+function lspwd() {
+  if [ $# == 0 ]; then
+    pwd && ls
+  else
+    ls "$@"
+  fi
+}
+alias ls='lspwd'
+
+function c() {
+  echo "puts [expr $1]" | tclsh;
+}
+
+function transfer() {
+  # check arguments
+  if [ $# -eq 0 ]; then
+    printf "No arguments specified! Usage:\ntransfer /path/to/file\n/path/to/file | transfer file\n"
+    return 1
+  fi
+
+  # get tmp filename, output is written to this file
+  tmpfile=$(mktemp -t transferXXX)
+
+  # upload stdin or file
+  file=$1
+
+  if tty -s; then
+    basefile=$(basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
+
+    if [ ! -e $file ]; then
+      echo "File $file does not exists."
+      return 1
+    fi
+
+    if [ -d $file ]; then
+      # zip directory and transfer
+      zipfile=$(mktemp -t transferXXX)
+      echo $zipfile
+      \cd $(dirname $file) && zip -r -q - $(basename $file) >> $zipfile
+      curl --progress-bar --upload-file "$zipfile" "https://transfer.sh/$basefile.zip" >> $tmpfile
+      \rm -f $zipfile
+    else
+      # transfer file
+      curl --progress-bar --upload-file "$file" "https://transfer.sh/$basefile" >> $tmpfile
+    fi
+  else
+    # transfer pipe
+    curl --progress-bar --upload-file "-" "https://transfer.sh/$file" >> $tmpfile
+  fi
+
+  # cat output link
+  cat $tmpfile
+
+  # cleanup
+  \rm -f "$tmpfile"
+}
+alias transfer=transfer

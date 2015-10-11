@@ -1,0 +1,39 @@
+# xrandr
+alias docked='~/programs/scripts/system/docked.sh'
+#alias undocked='~/programs/scripts/system/undocked.sh'
+alias work='~/programs/scripts/system/undocked.sh work'
+
+# system
+alias upgrade='yaourt -Syua'
+alias susp='~/programs/scripts/system/suspending.sh'
+
+# commandline shortcuts 
+alias ..='cd ..'
+alias ag='ag --hidden'
+alias cd..='cd ..'
+alias cp='cp -iv'
+alias du='du -h'
+alias free='free -m'
+alias ls='ls -lhp --group-directories-first --color --time-style="+%F %T"'
+alias lsgrep='ls | grep'
+alias mv='mv -iv'
+alias q='exit'
+alias rm='rm -v'
+alias strace='strace -s 2000'
+alias tmux='tmux -2'
+
+# programs
+alias dropbox='dropbox-cli'
+alias gnucash='LANGUAGE=C LANG=de_DE.UTF-8 gnucash'
+alias iotop='sudo iotop'
+alias myip='wget -qO - http://ipecho.net/plain ; echo'	#loads the specified URL; -q: no output; -O -: documents will be written to std output
+alias powertop='sudo powertop'
+
+# git
+alias ggui='git gui &'
+alias gitk='gitk --all &'
+alias glog='git log -n 6 --reverse'
+
+# android
+alias adbact='adb shell dumpsys activity | grep -i run'
+alias logcat='adb logcat'

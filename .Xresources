@@ -1,0 +1,14 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!rofi
+rofi.bg: #000000
+rofi.fg: #888888
+rofi.bc: #000000
+rofi.hlbg: #285577
+rofi.hlfg: #ffffff

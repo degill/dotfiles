@@ -1,0 +1,21 @@
+#
+# Refer to https://wiki.archlinux.org/index.php/Readline or https://www.reddit.com/r/commandline/comments/kbeoe/you_can_make_readline_and_bash_much_more_user/
+#
+# Tweaks the use of a terminal/bash
+#
+
+#ignore case for completion (TAB)
+set completion-ignore-case on
+
+#display dots (..) instead of common prefix after listing alternatives (TAB-TAB)
+set completion-prefix-display-length 2
+
+Control-f menu-complete
+
+Control-d menu-complete-backward
+
+#treat '_' and '-' the same when completing
+set completion-map-case on
+
+#display alternative in one column instead of in one row
+set completion-display-width 1

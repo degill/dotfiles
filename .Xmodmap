@@ -1,0 +1,4 @@
+! assign esc to caps lock (because caps lock is useless as hell)
+! this was also added to ~/documents/scripts/system/suspending
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape

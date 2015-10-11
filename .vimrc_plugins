@@ -1,0 +1,34 @@
+"Completion plugin
+if has('lua')
+    Plugin 'Shougo/neocomplete.vim'
+endif
+
+"Latex support
+Plugin 'lervag/vimtex'
+
+"Use the ag instead of grep to search outside of vim
+if executable('ag')
+    Plugin 'rking/ag.vim'
+endif
+
+"Auto close braces, quotes, etc.
+Plugin 'Raimondi/delimitMate'
+
+"File and directory structure
+"Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-vinegar'
+
+"Json syntax/highlighter
+Plugin 'elzr/vim-json'
+
+"Powerline
+Plugin 'bling/vim-airline'
+
+"Solarized theme
+Plugin 'flazz/vim-colorschemes'
+
+"Yet another colorscheme
+Plugin 'fabi1cazenave/kalahari.vim'
+
+"Vim plugin vor .tmux.conf
+Plugin 'tmux-plugins/vim-tmux'

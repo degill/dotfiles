@@ -1,0 +1,13 @@
+[user]
+	name = Dennis Gill
+	email = dg@fluidmobile.de
+[color]
+	ui = true
+[push]
+	default = simple
+[core]
+	autocrlf = input
+[url "https://bitbucket.org/"]
+    insteadOf = bb:
+[url "https://github.com/"]
+    insteadOf = gh:

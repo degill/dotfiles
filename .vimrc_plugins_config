@@ -1,0 +1,71 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" NEOCOMPLETE
+"Disable AutoComplPop
+let g:acp_enableAtStartup=0
+
+"Use neocomplete
+let g:neocomplete#enable_at_startup=1
+
+"Use smartcase
+let g:neocomplete#enable_smart_case=1
+
+"Undo completion and go back to what I inputted in the first place
+inoremap <expr><C-g> neocomplete#undo_completion()
+
+"Complete common string
+inoremap <expr><C-l> neocomplete#complete_common_string()
+
+"<TAB>: completion
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"Close popup
+inoremap <expr><C-y> neocomplete#close_popup()
+
+"Smart close popup
+inoremap <expr><C-h> neocomplete#smart_close_popup()
+
+"Cancel popup
+inoremap <expr><C-e> neocomplete#cancel_popup()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" NEOCOMPLETE
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" VIMTEX
+let g:vimtex_enabled=1
+let g:vimtex_complete_enabled=1
+let g:vimtex_complete_close_braces=1
+let g:vimtex_fold_enabled=0
+"let g:vimtex_latexmk_build_dir='./out'
+let g:vimtex_latexmk_continuous=0
+let g:vimtex_latexmk_background=0
+let g:vimtex_quickfix_autojump=1
+let g:vimtex_quickfix_mode=1
+
+if !exists('g:neocomplete#sources#omni#input_patterns')                                                                                                 
+    let g:neocomplete#sources#omni#input_patterns = {}
+endif
+    let g:neocomplete#sources#omni#input_patterns.tex =
+        \ '\v\\\a*(ref|cite)\a*([^]]*\])?\{([^}]*,)*[^}]*'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" VIMTEX
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" AG.VIM
+"Highlight search terms after searching
+let g:ag_highlight=1
+
+"Default options; --vimgrep is default; also use --smart-case
+let g:ag_prg="ag --vimgrep --smart-case"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" AG.VIM
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" NERDTree
+nnoremap <F3> :NERDTreeToggle<CR>
+
+"Close vim when NERDTree is only window left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" NERDTree
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" AIRLINE
+let g:airline_powerline_fonts=1
+let g:airline_theme="molokai"
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemod=':t'
+let g:airline#extensions#syntastic#enabled=1
+let g:airline_detect_paste=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" AIRLINE
+
