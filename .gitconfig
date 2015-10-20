@@ -7,7 +7,7 @@
 	default = simple
 [core]
 	autocrlf = input
-[url "https://bitbucket.org/"]
+[url "git@bitbucket.com:"]
     insteadOf = bb:
-[url "https://github.com/"]
+[url "git@github.com:"]
     insteadOf = gh:
