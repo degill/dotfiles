@@ -211,6 +211,7 @@ for_window [class="google-chrome-beta" window_role="pop-up" title="Deutschlandra
 for_window [class="Spotify"] move window to workspace 4
 for_window [class="Qalculate-gtk"] floating enable
 for_window [class="google-chrome-beta" window_role="pop-up" title="Pocket: Add Item - Google Chrome"] kill
+for_window [class="Vlc"] fullscreen disable
 
 
 # setup environment
