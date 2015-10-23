@@ -126,7 +126,8 @@ bindsym $mod+n move workspace to output right
 bindsym $mod+Shift+c reload
 
 # lock screen
-bindsym Control+$mod+Delete exec ~/programs/scripts/locknow.sh
+bindsym Control+$mod+Delete exec --no-startup-id ~/programs/scripts/locknow.sh
+
 
 # lock screen and suspend
 bindsym XF86Launch1 exec --no-startup-id i3lock --color=000000 && systemctl suspend
@@ -146,7 +147,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl -p spotify next
 bindsym XF86AudioPlay exec --no-startup-id playerctl -p spotify play-pause
 
 # turn off screen now
-bindsym Pause exec --no-startup-id i3lock --color=000000 && xset dpms force off &
+bindsym Pause exec --no-startup-id ~/programs/scripts/locknow.sh
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
