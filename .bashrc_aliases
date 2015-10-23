@@ -28,6 +28,7 @@ alias gnucash='LANGUAGE=C LANG=de_DE.UTF-8 gnucash'
 alias iotop='sudo iotop'
 alias myip='wget -qO - http://ipecho.net/plain ; echo'	#loads the specified URL; -q: no output; -O -: documents will be written to std output
 alias powertop='sudo powertop'
+alias vi='vim'
 
 # git
 alias ggui='git gui &'
