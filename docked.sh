@@ -89,6 +89,13 @@ else
 fi
 
 
+echo "`date`: Setting mouse speed" >> $LOGPATH
+MOUSE_INTELLI="Microsoft Microsoft IntelliMouse® Optical"
+xinput --set-prop "$MOUSE_INTELLI" 'Device Accel Constant Deceleration' 0.4
+xinput --set-prop "$MOUSE_INTELLI" 'Device Accel Adaptive Deceleration' 3
+xinput --set-prop "$MOUSE_INTELLI" 'Device Accel Velocity Scaling' 5
+
+
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # new line

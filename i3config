@@ -235,6 +235,6 @@ exec --no-startup-id redshift-gtk
 
 # mouse
 ## IntelliMouse
-exec_always --no-startup-id xinput --set-prop 'Microsoft Microsoft IntelliMouse® Optical' 'Device Accel Constant Deceleration' 0.4
-exec_always --no-startup-id xinput --set-prop 'Microsoft Microsoft IntelliMouse® Optical' 'Device Accel Adaptive Deceleration' 3
-exec_always --no-startup-id xinput --set-prop 'Microsoft Microsoft IntelliMouse® Optical' 'Device Accel Velocity Scaling' 5
+#exec_always --no-startup-id xinput --set-prop 'Microsoft Microsoft IntelliMouse® Optical' 'Device Accel Constant Deceleration' 0.4
+#exec_always --no-startup-id xinput --set-prop 'Microsoft Microsoft IntelliMouse® Optical' 'Device Accel Adaptive Deceleration' 3
+#exec_always --no-startup-id xinput --set-prop 'Microsoft Microsoft IntelliMouse® Optical' 'Device Accel Velocity Scaling' 5
