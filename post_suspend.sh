@@ -5,8 +5,8 @@ mkdir -p $LOGFOLDER
 LOGPATH=$LOGFOLDER/suspend.log
 echo "`date`: post_suspend" >> $LOGPATH
 
-
-~/programs/scripts/system/docked.sh
+# change monitor setup
+~/workspace/dotfiles/docked.sh
 
 # mute mic
 if [ "$(pacmd list-sources | grep muted | sed -n 2p | awk '{print $2}')" == "no" ]; then
