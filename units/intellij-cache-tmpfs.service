@@ -1,0 +1,9 @@
+[Unit] 
+Description=Mounts the cache and index directory of intellij as tmpfs 
+
+[Service] 
+User=USER
+ExecStart=/home/USER/workspace/dotfiles/scripts/intellij-cache-tmpfs.sh
+
+[Install] 
+WantedBy=multi-user.target 

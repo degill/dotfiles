@@ -12,8 +12,8 @@ PULSEAUDIO_CTL=true && type pulseaudio-ctl >/dev/null 2>&1 || { PULSEAUDIO_CTL=f
 
 
 mkdir -p $LOGFOLDER
-printf "`xrandr`" >> $LOGPATH
-printf "\n" >> $LOGPATH
+#printf "`xrandr`" >> $LOGPATH
+#printf "\n" >> $LOGPATH
 
 
 if [ "$#" -ne 1 ]; then
@@ -35,27 +35,24 @@ fi
 
 if [ $DOCKING_MODE == "home" ]; then
   echo "`date`: Adjusting displays to docked (home)" >> $LOGPATH
-  echo "`date`:`xrandr --output HDMI2 --auto`" >> $LOGPATH
-  echo "`date`:`xrandr --output LVDS1 --off`" >> $LOGPATH
-  echo "`date`:`xrandr --output DP3 --auto --primary --right-of HDMI2`" >> $LOGPATH
-  echo "`date`:`xrandr --output VGA1 --off`" >> $LOGPATH
-  echo "`date`: Adjusted displays to docked (home)" >> $LOGPATH
+  xrandr --output HDMI2 --auto
+  xrandr --output LVDS1 --off
+  xrandr --output DP3 --auto --primary --right-of HDMI2
+  xrandr --output VGA1 --off
 
 elif [ $DOCKING_MODE == "work" ]; then
   echo "`date`: Adjusting displays to docked (work)" >> $LOGPATH
-  echo "`date`:`xrandr --output DP3 --off`" >> $LOGPATH
-  echo "`date`:`xrandr --output LVDS1 --auto `" >> $LOGPATH
-  echo "`date`:`xrandr --output HDMI2 --off`" >> $LOGPATH
-  echo "`date`:`xrandr --output VGA1 --right-of LVDS1 --auto --primary`" >> $LOGPATH
-  echo "`date`: Adjusted displays to docked (work)" >> $LOGPATH
+  xrandr --output DP3 --off
+  xrandr --output LVDS1 --auto
+  xrandr --output HDMI2 --off
+  xrandr --output VGA1 --right-of LVDS1 --auto --primary
 
 else
   echo "`date`: Adjusting displays to undocked (LVDS1 only)" >> $LOGPATH
-  echo "`date`:`xrandr --output DP3 --off`" >> $LOGPATH
-  echo "`date`:`xrandr --output LVDS1 --auto --primary`" >> $LOGPATH
-  echo "`date`:`xrandr --output HDMI2 --off`" >> $LOGPATH
-  echo "`date`:`xrandr --output VGA1 --off`" >> $LOGPATH
-  echo "`date`: Adjusted displays to undocked" >> $LOGPATH
+  xrandr --output DP3 --off
+  xrandr --output LVDS1 --auto --primary
+  xrandr --output HDMI2 --off
+  xrandr --output VGA1 --off
 
 fi
 
@@ -63,7 +60,7 @@ fi
 
 echo "`date`: Restarting xautolock" >> $LOGPATH
 xautolock -exit
-~/workspace/dotfiles/xautolock.sh &
+~/workspace/dotfiles/scripts/xautolock.sh &
 
 
 

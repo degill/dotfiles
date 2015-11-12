@@ -1,0 +1,12 @@
+[Unit]
+Description=User resume actions
+After=suspend.target
+
+[Service]
+User=USER
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=-/home/USER/workspace/dotfiles/sripts/post_suspend.sh
+
+[Install]
+WantedBy=suspend.target

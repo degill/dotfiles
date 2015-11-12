@@ -1,0 +1,12 @@
+[Unit]
+Description=User suspend actions
+Before=sleep.target
+
+[Service]
+User=USER
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=-/home/USER/workspace/dotfiles/scripts/pre_suspend.sh
+
+[Install]
+WantedBy=sleep.target

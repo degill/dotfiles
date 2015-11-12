@@ -126,7 +126,7 @@ bindsym $mod+n move workspace to output right
 bindsym $mod+Shift+c reload
 
 # lock screen
-bindsym Control+$mod+Delete exec --no-startup-id ~/workspace/dotfiles/locknow.sh
+bindsym Control+$mod+Delete exec --no-startup-id ~/workspace/dotfiles/scripts/locknow.sh
 
 
 # lock screen and suspend
@@ -147,7 +147,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl -p spotify next
 bindsym XF86AudioPlay exec --no-startup-id playerctl -p spotify play-pause
 
 # turn off screen now
-bindsym Pause exec --no-startup-id ~/workspace/dotfiles/locknow.sh
+bindsym Pause exec --no-startup-id ~/workspace/dotfiles/scripts/locknow.sh
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -216,10 +216,10 @@ for_window [class="Vlc"] fullscreen disable
 
 
 # setup environment
-exec --no-startup-id ~/workspace/dotfiles/post_suspend.sh
+exec --no-startup-id ~/workspace/dotfiles/scripts/post_suspend.sh
 
 # start/set up some non-gui applications
-exec --no-startup-id ~/workspace/dotfiles/xautolock.sh
+exec --no-startup-id ~/workspace/dotfiles/scripts/xautolock.sh
 exec --no-startup-id xset dpms 0 0 0                        #dpms off
 exec --no-startup-id xset s off                             #screensaver off
 exec --no-startup-id xrdb -load ~/.Xresources

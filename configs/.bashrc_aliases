@@ -1,11 +1,11 @@
 # xrandr
-alias docked='~/workspace/dotfiles/docked.sh'
+alias docked='~/workspace/dotfiles/scripts/docked.sh'
 #alias undocked='~/programs/scripts/system/undocked.sh'
-alias work='~/workspace/dotfiles/undocked.sh work'
+alias work='~/workspace/dotfiles/scripts/docked.sh work'
 
 # system
 alias upgrade='yaourt -Syua'
-alias susp='~/workspace/dotfiles/suspend.sh'
+alias susp='~/workspace/dotfiles/scripts/suspend.sh'
 
 # commandline shortcuts 
 alias ..='cd ..'
