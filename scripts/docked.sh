@@ -2,7 +2,6 @@
 export PULSE_RUNTIME_PATH="/run/user/1000/pulse/"
 export DISPLAY=":0"
 
-VOLUME=75
 LOGFOLDER=/tmp/log
 LOGPATH=$LOGFOLDER/docked.log
 DOCKING_MODE=""

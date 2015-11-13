@@ -146,6 +146,9 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl -p spotify previous
 bindsym XF86AudioNext exec --no-startup-id playerctl -p spotify next
 bindsym XF86AudioPlay exec --no-startup-id playerctl -p spotify play-pause
 
+# setup monitors
+bindsym XF86Display exec --no-startup-id ~/workspace/dotfiles/scripts/docked.sh
+
 # turn off screen now
 bindsym Pause exec --no-startup-id ~/workspace/dotfiles/scripts/locknow.sh
 
