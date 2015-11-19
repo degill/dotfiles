@@ -1,0 +1,16 @@
+#ignore tex files
+*.aux
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nlo
+*.out
+*.thm
+
+.thunderbird/*
+.viminfo
+.bash_history
