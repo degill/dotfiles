@@ -1,0 +1,9 @@
+# these commands change some animation aspects permanently
+# just issue these on the command line
+
+# opening and closing windows and popovers
+defaults write -g NSAutomaticWindowAnimatinsEnabled -bool false
+
+# showig and hiding sheets, resizing preference windows, zooming windows
+# float 0 doesnt work
+defaults write -g NSWindowResizeTime -float 0.001

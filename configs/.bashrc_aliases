@@ -5,7 +5,8 @@ alias work='~/workspace/dotfiles/scripts/docked.sh work'
 
 # system
 alias upgrade='yaourt -Syua'
-alias susp='~/workspace/dotfiles/scripts/suspend.sh'
+#alias susp='~/workspace/dotfiles/scripts/suspend.sh'
+alias susp='pmset sleepnow'
 
 # commandline shortcuts 
 alias ..='cd ..'
@@ -14,7 +15,8 @@ alias cd..='cd ..'
 alias cp='cp -iv'
 alias du='du -h'
 alias free='free -m'
-alias ls='ls -lhp --group-directories-first --color --time-style="+%F %T"'
+#alias ls='ls -lhp --group-directories-first --color --time-style="+%F %T"' # linux
+alias ls='ls -lhp -G' # osx
 alias lsgrep='ls | grep'
 alias mv='mv -iv'
 alias q='exit'
@@ -29,6 +31,9 @@ alias iotop='sudo iotop'
 alias myip='wget -qO - http://ipecho.net/plain ; echo'	#loads the specified URL; -q: no output; -O -: documents will be written to std output
 alias powertop='sudo powertop'
 alias vi='vim'
+
+# osx programs
+alias finder='open -a finder .'
 
 # git
 alias ggui='git gui &'
