@@ -7,6 +7,7 @@
 	default = simple
 [core]
 	autocrlf = input
+  excludesfile = ~/.gitignore
 [url "git@bitbucket.com:"]
     insteadOf = bb:
 [url "git@github.com:"]
