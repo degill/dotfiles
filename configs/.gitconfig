@@ -9,6 +9,8 @@
 	autocrlf = input
   excludesfile = ~/.gitignore
 [url "git@bitbucket.com:"]
-    insteadOf = bb:
+  insteadOf = bb:
 [url "git@github.com:"]
-    insteadOf = gh:
+  insteadOf = gh:
+[merge]
+  ff = false
