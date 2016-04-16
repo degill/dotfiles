@@ -59,8 +59,8 @@ set t_Co=256
 set background=dark
 "colorscheme kalahari
 "colorscheme seti
-colorscheme mustang
-"colorscheme desert
+"colorscheme mustang
+colorscheme desert
 
 "Syntax highlighting
 syntax enable
