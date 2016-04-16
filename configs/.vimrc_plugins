@@ -23,6 +23,7 @@ Plugin 'elzr/vim-json'
 
 "Powerline
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 "Solarized theme
 Plugin 'flazz/vim-colorschemes'
@@ -32,3 +33,6 @@ Plugin 'fabi1cazenave/kalahari.vim'
 
 "Vim plugin vor .tmux.conf
 Plugin 'tmux-plugins/vim-tmux'
+
+"Dash.app
+Plugin 'rizzatti/dash.vim'
