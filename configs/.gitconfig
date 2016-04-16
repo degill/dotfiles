@@ -12,5 +12,3 @@
   insteadOf = bb:
 [url "git@github.com:"]
   insteadOf = gh:
-[merge]
-  ff = false
