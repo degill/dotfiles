@@ -26,6 +26,7 @@ alias tmux='tmux -2'
 
 # programs
 alias dropbox='dropbox-cli'
+alias gitx='gitx --all'
 alias gnucash='LANGUAGE=C LANG=de_DE.UTF-8 gnucash'
 alias iotop='sudo iotop'
 alias myip='wget -qO - http://ipecho.net/plain ; echo'	#loads the specified URL; -q: no output; -O -: documents will be written to std output
@@ -43,3 +44,4 @@ alias glog='git log -n 6 --reverse'
 # android
 alias adbact='adb shell dumpsys activity | grep -i run'
 alias logcat='adb logcat'
+alias adbrespm='adb shell pm reset-permissions'
